@@ -69,12 +69,12 @@ spec:
     spec:
       containers:
         - name: php-app
-          image: ghcr.io/mgleska/monolith-with-modules-and-4-layers
+          image: ghcr.io/mgleska/service-with-modules-and-4-layers
           ports:
             - containerPort: 8000
           env:
             - name: DATABASE_URL
-              value: "mysql://root:db_password@database:3306/monolith-app?serverVersion=10.11.7-MariaDB&charset=utf8mb4"
+              value: "mysql://root:db_password@database:3306/service-modules-app?serverVersion=10.11.7-MariaDB&charset=utf8mb4"
           command: ["/bin/sh", "-c", "/app/start-app.sh"]
 ---
 apiVersion: v1
